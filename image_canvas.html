@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image dan Canvas</title>
+  </head>
+  <body>
+    <h1>tugas canvas dan html</h1>
+    <!-- Canvas -->
+    <canvas
+      id="myCanvas"
+      width="400"
+      height="400"
+      style="border: 6px solid #000"
+    ></canvas>
+    <!-- script untuk mangatur canvas dan memasukkan image kedalam canvas -->
+    <script>
+      window.onload = function () {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "lightblue";
+        ctx.fillRect(100, 100, 200, 200);
+        const img = new Image();
+        img.onload = function () {
+          ctx.drawImage(img, 150, 150, 100, 100);
+        };
+        img.src = "image.jpg";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .nama {
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-column-gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        max-width: 300px;
+      }
+
+      .alamat {
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-column-gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        max-width: 300px;
+      }
+
+      .form-group {
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-column-gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        max-width: 300px;
+      }
+
+      .ttl {
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-column-gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+        max-width: 300px;
+      }
+
+      .jenis-kelamin {
+        display: grid;
+        grid-column-gap: 10px;
+        margin-bottom: 10px;
+        max-width: 300px;
+      }
+
+      .form-group label {
+        white-space: nowrap;
+        padding-right: 10px;
+      }
+      .Jenis-kelamin {
+        display: flex;
+        flex-direction: reverse-row;
+        align-items: center;
+      .input-group {
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>BIODATA</h2>
+
+    <form action="/action_page.php">
+      <div class="nama">
+        <label for="fname">Nama:</label>
+        <div class="input-nama">
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            onfocus="clearValue(this)"
+            size="20"
+          />
+        </div>
+      </div>
+      <div class="alamat">
+        <label for="lname">Alamat:</label>
+        <div class="input-group">
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            onfocus="clearValue(this)"
+            size="50"
+          />
+        </div>
+      </div>
+      <div class="ttl">
+        <label for="tanggallahir">TTL:</label>
+        <div class="input-group">
+          <input
+            type="text"
+            id="tempat"
+            name="tempat"
+            onfocus="clearValue(this)"
+            size="40"
+          />
+          <select id="tanggal" name="tanggal">
+            <option value="tanggal">tanggal</option>
+          </select>
+          <select id="bulan" name="bulan">
+            <option value="bulan">bulan</option>
+          </select>
+          <select id="tahun" name="tahun">
+            <option value="tahun">tahun</option>
+          </select>
+        </div>
+      </div>
+      <div class="Jenis-kelamin">
+        <label for="gender">Jenis Kelamin:</label>
+        <div class="input-group">
+          <input type="radio" id="male" name="gender" value="Laki-laki" />
+          <label for="male">Laki-laki</label>
+          <input type="radio" id="female" name="gender" value="Perempuan" />
+          <label for="female">Perempuan</label>
+        </div>
+      </div>
+      <label for="agama">agama:</label>
+      <select id="agama" name="agama">
+        <option value="agama">agama</option>
+        <option value="islam">islam</option>
+        <option value="kristen">kristen</option>
+        <option value="budha">budha</option>
+        <option value="katolik">katolik</option>
+      </select>
+      <div class="hobi">
+        <label for="hobi">hobi:</label>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="berenang" />
+        <label for="vehicle1">main bola</label>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="nonton" />
+        <label for="vehicle2">motoran</label>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="game" />
+        <label for="vehicle3">editor</label>
+        <input
+          type="checkbox"
+          id="vehicle3"
+          name="vehicle3"
+          value="trevelling"
+        />
+        <label for="vehicle3">ngoding</label>
+      </div>
+
+      <input type="submit" value="Submit" />
+      <input type="submit" value="reset" />
+    </form>
+
+    <script>
+      function clearplaceholder(element) {
+        if (
+          element.placeholder === "nama" ||
+          element.placeholder === "alamat anda" ||
+          element.placeholder === "tanggal lahir anda"
+        ) {
+          element.placeholder = "";
+        }
+      }
+    </script>
+  </body>
+</html>
